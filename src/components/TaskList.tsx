@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 import '../styles/tasklist.scss'
 
-import { FiTrash, FiCheckSquare } from 'react-icons/fi'
+import { FiTrash, FiCheckSquare } from 'react-icons/fi';
 
 interface Task {
   id: number;
@@ -16,6 +16,11 @@ export function TaskList() {
 
   function handleCreateNewTask() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+
+    setTasks({ id: 1,
+       title: newTaskTitle, 
+       isComplete: true
+      })
   }
 
   function handleToggleTaskCompletion(id: number) {
